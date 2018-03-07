@@ -1,8 +1,10 @@
 {
   "name": "animated-feather",
+  "description": "",
   "version": "0.1.0",
   "private": true,
   "author": "Johnny Hu <heyitsjhu@gmail.com>",
+  "repository": "github:heyitsjhu/animated-feather",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
