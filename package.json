@@ -2,15 +2,23 @@
   "name": "animated-feather",
   "version": "0.1.0",
   "private": true,
+  "author": "Johnny Hu <heyitsjhu@gmail.com>",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-feather": "^1.0.8",
     "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "watch": "npm-run-all -p start watch:css",
+    "watch:css": "node-sass src/scss/animated-feather.scss src/animated-feather.css --watch",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2"
   }
 }
