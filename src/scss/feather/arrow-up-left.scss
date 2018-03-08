@@ -1,0 +1,23 @@
+@keyframes featherArrowUpLeft {
+	0% { 
+		transform: translate(0%);
+	}
+	20% { 
+		transform: translate(10%, 10%);	
+	}
+	50% { 
+		transform: translate(-20%, -20%);	
+	}
+	70% { 
+		transform: translate(8%, 8%);	
+	}
+	90% { 
+		transform: translate(-20%, -20%);
+	}
+	100% { 
+		transform: translate(-20%, -20%);
+	}
+}
+.feather-arrow-up-left {
+	animation-name: featherArrowUpLeft;	
+}

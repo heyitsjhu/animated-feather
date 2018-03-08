@@ -3,7 +3,7 @@
 .feather path,
 .feather polygon {
 	animation-duration: 1s;
-	animation-iteration-count: 3;
+	animation-iteration-count: 1;
 }
 
 @import 'feather/activity';
@@ -11,5 +11,26 @@
 @import 'feather/alert-circle';
 @import 'feather/alert-octagon';
 @import 'feather/alert-triangle';
+@import 'feather/align-center';
+@import 'feather/align-justify';
+
+@import 'feather/align-left';
+@import 'feather/align-right';
+@import 'feather/arrow-down-circle';
+@import 'feather/arrow-down-left';
+@import 'feather/arrow-down-right';
+
+
+@import 'feather/arrow-down';
+@import 'feather/arrow-left-circle';
+@import 'feather/arrow-left';
+@import 'feather/arrow-right-circle';
+@import 'feather/arrow-right';
+@import 'feather/arrow-up-circle';
+@import 'feather/arrow-up-right';
+
+@import 'feather/arrow-up-left';
+@import 'feather/arrow-up';
+
 @import 'feather/trending-down';
 @import 'feather/trending-up';

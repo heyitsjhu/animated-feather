@@ -1,0 +1,14 @@
+@keyframes featherAlignCenter {
+	from { 
+		stroke-dasharray: 100;
+		stroke-dashoffset: -100; 
+	}
+	to { 
+		stroke-dasharray: 100;
+		stroke-dashoffset: 0; 
+	}
+}
+.feather-align-center line {
+	stroke-dashoffset: -100;
+	animation-name: featherAlignCenter;	
+}

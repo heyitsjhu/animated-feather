@@ -1,0 +1,14 @@
+@keyframes featherAlignLeft {
+	from { 
+		stroke-dasharray: 25;
+		stroke-dashoffset: -25; 
+	}
+	to { 
+		stroke-dasharray: 25;
+		stroke-dashoffset: 0; 
+	}
+}
+.feather-align-left line {
+	// stroke-dashoffset: -25;
+	animation-name: featherAlignLeft;	
+}

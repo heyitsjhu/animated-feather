@@ -1,0 +1,14 @@
+@keyframes featherAlignRight {
+	from { 
+		stroke-dasharray: 20;
+		stroke-dashoffset: 20; 
+	}
+	to { 
+		stroke-dasharray: 20;
+		stroke-dashoffset: 0; 
+	}
+}
+.feather-align-right line {
+	stroke-dashoffset: 20;
+	animation-name: featherAlignRight;	
+}

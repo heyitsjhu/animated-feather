@@ -1,0 +1,23 @@
+@keyframes featherArrowRightCircle {
+	0% { 
+		transform: translateX(0%);
+	}
+	20% { 
+		transform: translateX(-10%);	
+	}
+	50% { 
+		transform: translateX(20%);	
+	}
+	70% { 
+		transform: translateX(-8%);	
+	}
+	90% { 
+		transform: translateX(20%);
+	}
+	100% { 
+		transform: translateX(20%);
+	}
+}
+.feather-arrow-right-circle {
+	animation-name: featherArrowRightCircle;	
+}

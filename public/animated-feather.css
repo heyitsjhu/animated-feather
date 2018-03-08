@@ -3,7 +3,7 @@
 .feather path,
 .feather polygon {
   animation-duration: 1s;
-  animation-iteration-count: 3; }
+  animation-iteration-count: 1; }
 
 @keyframes featherActivity {
   0% {
@@ -60,6 +60,257 @@
 .feather-alert-triangle line {
   transform-origin: center center;
   animation-name: featherAlertTriangle; }
+
+@keyframes featherAlignCenter {
+  from {
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100; }
+  to {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0; } }
+
+.feather-align-center line {
+  stroke-dashoffset: -100;
+  animation-name: featherAlignCenter; }
+
+@keyframes featherAlignJustify {
+  from {
+    stroke-dasharray: 100;
+    stroke-dashoffset: -100; }
+  to {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0; } }
+
+.feather-align-justify line {
+  stroke-dashoffset: -100;
+  animation-name: featherAlignJustify; }
+
+@keyframes featherAlignLeft {
+  from {
+    stroke-dasharray: 25;
+    stroke-dashoffset: -25; }
+  to {
+    stroke-dasharray: 25;
+    stroke-dashoffset: 0; } }
+
+.feather-align-left line {
+  animation-name: featherAlignLeft; }
+
+@keyframes featherAlignRight {
+  from {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20; }
+  to {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 0; } }
+
+.feather-align-right line {
+  stroke-dashoffset: 20;
+  animation-name: featherAlignRight; }
+
+@keyframes featherArrowDownCircle {
+  0% {
+    transform: translateY(0%); }
+  20% {
+    transform: translateY(-10%); }
+  50% {
+    transform: translateY(20%); }
+  70% {
+    transform: translateY(-8%); }
+  90% {
+    transform: translateY(20%); }
+  100% {
+    transform: translateY(20%); } }
+
+.feather-arrow-down-circle {
+  animation-name: featherArrowDownCircle; }
+
+@keyframes featherArrowDownLeft {
+  0% {
+    transform: translate(0%); }
+  20% {
+    transform: translate(10%, -10%); }
+  50% {
+    transform: translate(-20%, 20%); }
+  70% {
+    transform: translate(8%, -8%); }
+  90% {
+    transform: translate(-20%, 20%); }
+  100% {
+    transform: translate(-20%, 20%); } }
+
+.feather-arrow-down-left {
+  animation-name: featherArrowDownLeft; }
+
+@keyframes featherArrowDownRight {
+  0% {
+    transform: translate(0%); }
+  20% {
+    transform: translate(-10%, -10%); }
+  50% {
+    transform: translate(20%, 20%); }
+  70% {
+    transform: translate(-8%, -8%); }
+  90% {
+    transform: translate(20%, 20%); }
+  100% {
+    transform: translate(20%, 20%); } }
+
+.feather-arrow-down-right {
+  animation-name: featherArrowDownRight; }
+
+@keyframes featherArrowDown {
+  0% {
+    transform: translateY(0%); }
+  20% {
+    transform: translateY(-10%); }
+  50% {
+    transform: translateY(20%); }
+  70% {
+    transform: translateY(-8%); }
+  90% {
+    transform: translateY(20%); }
+  100% {
+    transform: translateY(20%); } }
+
+.feather-arrow-down {
+  animation-name: featherArrowDown; }
+
+@keyframes featherArrowLeftCircle {
+  0% {
+    transform: translateX(0%); }
+  20% {
+    transform: translateX(10%); }
+  50% {
+    transform: translateX(-20%); }
+  70% {
+    transform: translateX(8%); }
+  90% {
+    transform: translateX(-20%); }
+  100% {
+    transform: translateX(-20%); } }
+
+.feather-arrow-left-circle {
+  animation-name: featherArrowLeftCircle; }
+
+@keyframes featherArrowLeft {
+  0% {
+    transform: translateX(0%); }
+  20% {
+    transform: translateX(10%); }
+  50% {
+    transform: translateX(-20%); }
+  70% {
+    transform: translateX(8%); }
+  90% {
+    transform: translateX(-20%); }
+  100% {
+    transform: translateX(-20%); } }
+
+.feather-arrow-left {
+  animation-name: featherArrowLeft; }
+
+@keyframes featherArrowRightCircle {
+  0% {
+    transform: translateX(0%); }
+  20% {
+    transform: translateX(-10%); }
+  50% {
+    transform: translateX(20%); }
+  70% {
+    transform: translateX(-8%); }
+  90% {
+    transform: translateX(20%); }
+  100% {
+    transform: translateX(20%); } }
+
+.feather-arrow-right-circle {
+  animation-name: featherArrowRightCircle; }
+
+@keyframes featherArrowRight {
+  0% {
+    transform: translateX(0%); }
+  20% {
+    transform: translateX(-10%); }
+  50% {
+    transform: translateX(20%); }
+  70% {
+    transform: translateX(-8%); }
+  90% {
+    transform: translateX(20%); }
+  100% {
+    transform: translateX(20%); } }
+
+.feather-arrow-right {
+  animation-name: featherArrowRight; }
+
+@keyframes featherArrowUpCircle {
+  0% {
+    transform: translateY(0%); }
+  20% {
+    transform: translateY(10%); }
+  50% {
+    transform: translateY(-20%); }
+  70% {
+    transform: translateY(8%); }
+  90% {
+    transform: translateY(-20%); }
+  100% {
+    transform: translateY(-20%); } }
+
+.feather-arrow-up-circle {
+  animation-name: featherArrowUpCircle; }
+
+@keyframes featherArrowUpRight {
+  0% {
+    transform: translate(0%); }
+  20% {
+    transform: translate(-10%, 10%); }
+  50% {
+    transform: translate(20%, -20%); }
+  70% {
+    transform: translate(-8%, 8%); }
+  90% {
+    transform: translate(20%, -20%); }
+  100% {
+    transform: translate(20%, -20%); } }
+
+.feather-arrow-up-right {
+  animation-name: featherArrowUpRight; }
+
+@keyframes featherArrowUpLeft {
+  0% {
+    transform: translate(0%); }
+  20% {
+    transform: translate(10%, 10%); }
+  50% {
+    transform: translate(-20%, -20%); }
+  70% {
+    transform: translate(8%, 8%); }
+  90% {
+    transform: translate(-20%, -20%); }
+  100% {
+    transform: translate(-20%, -20%); } }
+
+.feather-arrow-up-left {
+  animation-name: featherArrowUpLeft; }
+
+@keyframes featherArrowUp {
+  0% {
+    transform: translateY(0%); }
+  20% {
+    transform: translateY(10%); }
+  50% {
+    transform: translateY(-20%); }
+  70% {
+    transform: translateY(8%); }
+  90% {
+    transform: translateY(-20%); }
+  100% {
+    transform: translateY(-20%); } }
+
+.feather-arrow-up {
+  animation-name: featherArrowUp; }
 
 @keyframes featherTrendingDown {
   from {
