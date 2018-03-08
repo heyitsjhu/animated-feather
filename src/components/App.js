@@ -6,7 +6,9 @@ import Icon from './Icon/Icon';
 
 class App extends Component {
   renderIcons() {
-    return ICONS.map( (icon) => <Icon name={icon} key={icon.toLowerCase()}/> );
+    return ICONS.map( (icon) => {
+      return <Icon name={icon} size="48" key={icon.toLowerCase()} /> 
+    });
   }
 
   render() {

@@ -2,537 +2,546 @@ import React, { Component } from 'react'
 import { Activity, Airplay, AlertCircle, AlertOctagon, AlertTriangle, AlignCenter, AlignJustify, AlignLeft, AlignRight, Anchor, Aperture, ArrowDownCircle, ArrowDownLeft, ArrowDownRight, ArrowDown, ArrowLeftCircle, ArrowLeft, ArrowRightCircle, ArrowRight, ArrowUpCircle, ArrowUpLeft, ArrowUpRight, ArrowUp, AtSign, Award, BarChart2, BarChart, BatteryCharging, Battery, BellOff, Bell, Bluetooth, Bold, BookOpen, Book, Bookmark, Box, Briefcase, Calendar, CameraOff, Camera, Cast, CheckCircle, CheckSquare, Check, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, ChevronsDown, ChevronsLeft, ChevronsRight, ChevronsUp, Chrome, Circle, Clipboard, Clock, CloudDrizzle, CloudLightning, CloudOff, CloudRain, CloudSnow, Cloud, Code, Codepen, Command, Compass, Copy, CornerDownLeft, CornerDownRight, CornerLeftDown, CornerLeftUp, CornerRightDown, CornerRightUp, CornerUpLeft, CornerUpRight, Cpu, CreditCard, Crop, Crosshair, Database, Delete, Disc, DollarSign, DownloadCloud, Download, Droplet, Edit2, Edit3, Edit, ExternalLink, EyeOff, Eye, Facebook, FastForward, Feather, FileMinus, FilePlus, FileText, File, Film, Filter, Flag, FolderMinus, FolderPlus, Folder, GitBranch, GitCommit, GitMerge, GitPullRequest, Github, Gitlab, Globe, Grid, HardDrive, Hash, Headphones, Heart, HelpCircle, Home, Image, Inbox, Info, Instagram, Italic, Layers, Layout, LifeBuoy, Link2, Link, Linkedin, List, Loader, Lock, LogIn, LogOut, Mail, MapPin, Map, Maximize2, Maximize, Menu, MessageCircle, MessageSquare, MicOff, Mic, Minimize2, Minimize, MinusCircle, MinusSquare, Minus, Monitor, Moon, MoreHorizontal, MoreVertical, Move, Music, Navigation2, Navigation, Octagon, Package, Paperclip, PauseCircle, Pause, Percent, PhoneCall, PhoneForwarded, PhoneIncoming, PhoneMissed, PhoneOff, PhoneOutgoing, Phone, PieChart, PlayCircle, Play, PlusCircle, PlusSquare, Plus, Pocket, Power, Printer, Radio, RefreshCcw, RefreshCw, Repeat, Rewind, RotateCcw, RotateCw, Rss, Save, Scissors, Search, Send, Server, Settings, Share2, Share, ShieldOff, Shield, ShoppingBag, ShoppingCart, Shuffle, Sidebar, SkipBack, SkipForward, Slack, Slash, Sliders, Smartphone, Speaker, Square, Star, StopCircle, Sun, Sunrise, Sunset, Tablet, Tag, Target, Terminal, Thermometer, ThumbsDown, ThumbsUp, ToggleLeft, ToggleRight, Trash2, Trash, TrendingDown, TrendingUp, Triangle, Truck, Tv, Twitter, Type, Umbrella, Underline, Unlock, UploadCloud, Upload, UserCheck, UserMinus, UserPlus, UserX, User, Users, VideoOff, Video, Voicemail, Volume1, Volume2, VolumeX, Volume, Watch, WifiOff, Wifi, Wind, XCircle, XSquare, X, ZapOff, Zap, ZoomIn, ZoomOut } from 'react-feather';
 
 class Icon extends Component {
+  constructor(props) {
+    super(props);
+    this.iconClassName = this.formatIconNameToCssClass(this.props.name);
+  }
+  formatIconNameToCssClass(string) {
+    return string.replace(/([A-Z])/g, "-$1").slice(1).toLowerCase();
+  }
 
 	renderIcon() {
+
+    let classList = "feather feather-"+this.iconClassName;
 		switch (this.props.name) {
 			case "Activity":
-				return <Activity size="48" />;
+				return <Activity size={this.props.size} className={classList} />;
 			case "Airplay":
-				return <Airplay size="48" />;
+				return <Airplay size={this.props.size} className={classList} />;
 			case "AlertCircle":
-				return <AlertCircle size="48" />;
+				return <AlertCircle size={this.props.size} className={classList} />;
 			case "AlertOctagon":
-				return <AlertOctagon size="48" />;
+				return <AlertOctagon size={this.props.size} className={classList} />;
 			case "AlertTriangle":
-				return <AlertTriangle size="48" />;
+				return <AlertTriangle size={this.props.size} className={classList} />;
 			case "AlignCenter":
-				return <AlignCenter size="48" />;
+				return <AlignCenter size={this.props.size} className={classList} />;
 			case "AlignJustify":
-				return <AlignJustify size="48" />;
+				return <AlignJustify size={this.props.size} className={classList} />;
 			case "AlignLeft":
-				return <AlignLeft size="48" />;
+				return <AlignLeft size={this.props.size} className={classList} />;
 			case "AlignRight":
-				return <AlignRight size="48" />;
+				return <AlignRight size={this.props.size} className={classList} />;
 			case "Anchor":
-				return <Anchor size="48" />;
+				return <Anchor size={this.props.size} className={classList} />;
 			case "Aperture":
-				return <Aperture size="48" />;
+				return <Aperture size={this.props.size} className={classList} />;
 			case "ArrowDownCircle":
-				return <ArrowDownCircle size="48" />;
+				return <ArrowDownCircle size={this.props.size} className={classList} />;
 			case "ArrowDownLeft":
-				return <ArrowDownLeft size="48" />;
+				return <ArrowDownLeft size={this.props.size} className={classList} />;
 			case "ArrowDownRight":
-				return <ArrowDownRight size="48" />;
+				return <ArrowDownRight size={this.props.size} className={classList} />;
 			case "ArrowDown":
-				return <ArrowDown size="48" />;
+				return <ArrowDown size={this.props.size} className={classList} />;
 			case "ArrowLeftCircle":
-				return <ArrowLeftCircle size="48" />;
+				return <ArrowLeftCircle size={this.props.size} className={classList} />;
 			case "ArrowLeft":
-				return <ArrowLeft size="48" />;
+				return <ArrowLeft size={this.props.size} className={classList} />;
 			case "ArrowRightCircle":
-				return <ArrowRightCircle size="48" />;
+				return <ArrowRightCircle size={this.props.size} className={classList} />;
 			case "ArrowRight":
-				return <ArrowRight size="48" />;
+				return <ArrowRight size={this.props.size} className={classList} />;
 			case "ArrowUpCircle":
-				return <ArrowUpCircle size="48" />;
+				return <ArrowUpCircle size={this.props.size} className={classList} />;
 			case "ArrowUpLeft":
-				return <ArrowUpLeft size="48" />;
+				return <ArrowUpLeft size={this.props.size} className={classList} />;
 			case "ArrowUpRight":
-				return <ArrowUpRight size="48" />;
+				return <ArrowUpRight size={this.props.size} className={classList} />;
 			case "ArrowUp":
-				return <ArrowUp size="48" />;
+				return <ArrowUp size={this.props.size} className={classList} />;
 			case "AtSign":
-				return <AtSign size="48" />;
+				return <AtSign size={this.props.size} className={classList} />;
 			case "Award":
-				return <Award size="48" />;
+				return <Award size={this.props.size} className={classList} />;
 			case "BarChart2":
-				return <BarChart2 size="48" />;
+				return <BarChart2 size={this.props.size} className={classList} />;
 			case "BarChart":
-				return <BarChart size="48" />;
+				return <BarChart size={this.props.size} className={classList} />;
 			case "BatteryCharging":
-				return <BatteryCharging size="48" />;
+				return <BatteryCharging size={this.props.size} className={classList} />;
 			case "Battery":
-				return <Battery size="48" />;
+				return <Battery size={this.props.size} className={classList} />;
 			case "BellOff":
-				return <BellOff size="48" />;
+				return <BellOff size={this.props.size} className={classList} />;
 			case "Bell":
-				return <Bell size="48" />;
+				return <Bell size={this.props.size} className={classList} />;
 			case "Bluetooth":
-				return <Bluetooth size="48" />;
+				return <Bluetooth size={this.props.size} className={classList} />;
 			case "Bold":
-				return <Bold size="48" />;
+				return <Bold size={this.props.size} className={classList} />;
 			case "BookOpen":
-				return <BookOpen size="48" />;
+				return <BookOpen size={this.props.size} className={classList} />;
 			case "Book":
-				return <Book size="48" />;
+				return <Book size={this.props.size} className={classList} />;
 			case "Bookmark":
-				return <Bookmark size="48" />;
+				return <Bookmark size={this.props.size} className={classList} />;
 			case "Box":
-				return <Box size="48" />;
+				return <Box size={this.props.size} className={classList} />;
 			case "Briefcase":
-				return <Briefcase size="48" />;
+				return <Briefcase size={this.props.size} className={classList} />;
 			case "Calendar":
-				return <Calendar size="48" />;
+				return <Calendar size={this.props.size} className={classList} />;
 			case "CameraOff":
-				return <CameraOff size="48" />;
+				return <CameraOff size={this.props.size} className={classList} />;
 			case "Camera":
-				return <Camera size="48" />;
+				return <Camera size={this.props.size} className={classList} />;
 			case "Cast":
-				return <Cast size="48" />;
+				return <Cast size={this.props.size} className={classList} />;
 			case "CheckCircle":
-				return <CheckCircle size="48" />;
+				return <CheckCircle size={this.props.size} className={classList} />;
 			case "CheckSquare":
-				return <CheckSquare size="48" />;
+				return <CheckSquare size={this.props.size} className={classList} />;
 			case "Check":
-				return <Check size="48" />;
+				return <Check size={this.props.size} className={classList} />;
 			case "ChevronDown":
-				return <ChevronDown size="48" />;
+				return <ChevronDown size={this.props.size} className={classList} />;
 			case "ChevronLeft":
-				return <ChevronLeft size="48" />;
+				return <ChevronLeft size={this.props.size} className={classList} />;
 			case "ChevronRight":
-				return <ChevronRight size="48" />;
+				return <ChevronRight size={this.props.size} className={classList} />;
 			case "ChevronUp":
-				return <ChevronUp size="48" />;
+				return <ChevronUp size={this.props.size} className={classList} />;
 			case "ChevronsDown":
-				return <ChevronsDown size="48" />;
+				return <ChevronsDown size={this.props.size} className={classList} />;
 			case "ChevronsLeft":
-				return <ChevronsLeft size="48" />;
+				return <ChevronsLeft size={this.props.size} className={classList} />;
 			case "ChevronsRight":
-				return <ChevronsRight size="48" />;
+				return <ChevronsRight size={this.props.size} className={classList} />;
 			case "ChevronsUp":
-				return <ChevronsUp size="48" />;
+				return <ChevronsUp size={this.props.size} className={classList} />;
 			case "Chrome":
-				return <Chrome size="48" />;
+				return <Chrome size={this.props.size} className={classList} />;
 			case "Circle":
-				return <Circle size="48" />;
+				return <Circle size={this.props.size} className={classList} />;
 			case "Clipboard":
-				return <Clipboard size="48" />;
+				return <Clipboard size={this.props.size} className={classList} />;
 			case "Clock":
-				return <Clock size="48" />;
+				return <Clock size={this.props.size} className={classList} />;
 			case "CloudDrizzle":
-				return <CloudDrizzle size="48" />;
+				return <CloudDrizzle size={this.props.size} className={classList} />;
 			case "CloudLightning":
-				return <CloudLightning size="48" />;
+				return <CloudLightning size={this.props.size} className={classList} />;
 			case "CloudOff":
-				return <CloudOff size="48" />;
+				return <CloudOff size={this.props.size} className={classList} />;
 			case "CloudRain":
-				return <CloudRain size="48" />;
+				return <CloudRain size={this.props.size} className={classList} />;
 			case "CloudSnow":
-				return <CloudSnow size="48" />;
+				return <CloudSnow size={this.props.size} className={classList} />;
 			case "Cloud":
-				return <Cloud size="48" />;
+				return <Cloud size={this.props.size} className={classList} />;
 			case "Code":
-				return <Code size="48" />;
+				return <Code size={this.props.size} className={classList} />;
 			case "Codepen":
-				return <Codepen size="48" />;
+				return <Codepen size={this.props.size} className={classList} />;
 			case "Command":
-				return <Command size="48" />;
+				return <Command size={this.props.size} className={classList} />;
 			case "Compass":
-				return <Compass size="48" />;
+				return <Compass size={this.props.size} className={classList} />;
 			case "Copy":
-				return <Copy size="48" />;
+				return <Copy size={this.props.size} className={classList} />;
 			case "CornerDownLeft":
-				return <CornerDownLeft size="48" />;
+				return <CornerDownLeft size={this.props.size} className={classList} />;
 			case "CornerDownRight":
-				return <CornerDownRight size="48" />;
+				return <CornerDownRight size={this.props.size} className={classList} />;
 			case "CornerLeftDown":
-				return <CornerLeftDown size="48" />;
+				return <CornerLeftDown size={this.props.size} className={classList} />;
 			case "CornerLeftUp":
-				return <CornerLeftUp size="48" />;
+				return <CornerLeftUp size={this.props.size} className={classList} />;
 			case "CornerRightDown":
-				return <CornerRightDown size="48" />;
+				return <CornerRightDown size={this.props.size} className={classList} />;
 			case "CornerRightUp":
-				return <CornerRightUp size="48" />;
+				return <CornerRightUp size={this.props.size} className={classList} />;
 			case "CornerUpLeft":
-				return <CornerUpLeft size="48" />;
+				return <CornerUpLeft size={this.props.size} className={classList} />;
 			case "CornerUpRight":
-				return <CornerUpRight size="48" />;
+				return <CornerUpRight size={this.props.size} className={classList} />;
 			case "Cpu":
-				return <Cpu size="48" />;
+				return <Cpu size={this.props.size} className={classList} />;
 			case "CreditCard":
-				return <CreditCard size="48" />;
+				return <CreditCard size={this.props.size} className={classList} />;
 			case "Crop":
-				return <Crop size="48" />;
+				return <Crop size={this.props.size} className={classList} />;
 			case "Crosshair":
-				return <Crosshair size="48" />;
+				return <Crosshair size={this.props.size} className={classList} />;
 			case "Database":
-				return <Database size="48" />;
+				return <Database size={this.props.size} className={classList} />;
 			case "Delete":
-				return <Delete size="48" />;
+				return <Delete size={this.props.size} className={classList} />;
 			case "Disc":
-				return <Disc size="48" />;
+				return <Disc size={this.props.size} className={classList} />;
 			case "DollarSign":
-				return <DollarSign size="48" />;
+				return <DollarSign size={this.props.size} className={classList} />;
 			case "DownloadCloud":
-				return <DownloadCloud size="48" />;
+				return <DownloadCloud size={this.props.size} className={classList} />;
 			case "Download":
-				return <Download size="48" />;
+				return <Download size={this.props.size} className={classList} />;
 			case "Droplet":
-				return <Droplet size="48" />;
+				return <Droplet size={this.props.size} className={classList} />;
 			case "Edit2":
-				return <Edit2 size="48" />;
+				return <Edit2 size={this.props.size} className={classList} />;
 			case "Edit3":
-				return <Edit3 size="48" />;
+				return <Edit3 size={this.props.size} className={classList} />;
 			case "Edit":
-				return <Edit size="48" />;
+				return <Edit size={this.props.size} className={classList} />;
 			case "ExternalLink":
-				return <ExternalLink size="48" />;
+				return <ExternalLink size={this.props.size} className={classList} />;
 			case "EyeOff":
-				return <EyeOff size="48" />;
+				return <EyeOff size={this.props.size} className={classList} />;
 			case "Eye":
-				return <Eye size="48" />;
+				return <Eye size={this.props.size} className={classList} />;
 			case "Facebook":
-				return <Facebook size="48" />;
+				return <Facebook size={this.props.size} className={classList} />;
 			case "FastForward":
-				return <FastForward size="48" />;
+				return <FastForward size={this.props.size} className={classList} />;
 			case "Feather":
-				return <Feather size="48" />;
+				return <Feather size={this.props.size} className={classList} />;
 			case "FileMinus":
-				return <FileMinus size="48" />;
+				return <FileMinus size={this.props.size} className={classList} />;
 			case "FilePlus":
-				return <FilePlus size="48" />;
+				return <FilePlus size={this.props.size} className={classList} />;
 			case "FileText":
-				return <FileText size="48" />;
+				return <FileText size={this.props.size} className={classList} />;
 			case "File":
-				return <File size="48" />;
+				return <File size={this.props.size} className={classList} />;
 			case "Film":
-				return <Film size="48" />;
+				return <Film size={this.props.size} className={classList} />;
 			case "Filter":
-				return <Filter size="48" />;
+				return <Filter size={this.props.size} className={classList} />;
 			case "Flag":
-				return <Flag size="48" />;
+				return <Flag size={this.props.size} className={classList} />;
 			case "FolderMinus":
-				return <FolderMinus size="48" />;
+				return <FolderMinus size={this.props.size} className={classList} />;
 			case "FolderPlus":
-				return <FolderPlus size="48" />;
+				return <FolderPlus size={this.props.size} className={classList} />;
 			case "Folder":
-				return <Folder size="48" />;
+				return <Folder size={this.props.size} className={classList} />;
 			case "GitBranch":
-				return <GitBranch size="48" />;
+				return <GitBranch size={this.props.size} className={classList} />;
 			case "GitCommit":
-				return <GitCommit size="48" />;
+				return <GitCommit size={this.props.size} className={classList} />;
 			case "GitMerge":
-				return <GitMerge size="48" />;
+				return <GitMerge size={this.props.size} className={classList} />;
 			case "GitPullRequest":
-				return <GitPullRequest size="48" />;
+				return <GitPullRequest size={this.props.size} className={classList} />;
 			case "Github":
-				return <Github size="48" />;
+				return <Github size={this.props.size} className={classList} />;
 			case "Gitlab":
-				return <Gitlab size="48" />;
+				return <Gitlab size={this.props.size} className={classList} />;
 			case "Globe":
-				return <Globe size="48" />;
+				return <Globe size={this.props.size} className={classList} />;
 			case "Grid":
-				return <Grid size="48" />;
+				return <Grid size={this.props.size} className={classList} />;
 			case "HardDrive":
-				return <HardDrive size="48" />;
+				return <HardDrive size={this.props.size} className={classList} />;
 			case "Hash":
-				return <Hash size="48" />;
+				return <Hash size={this.props.size} className={classList} />;
 			case "Headphones":
-				return <Headphones size="48" />;
+				return <Headphones size={this.props.size} className={classList} />;
 			case "Heart":
-				return <Heart size="48" />;
+				return <Heart size={this.props.size} className={classList} />;
 			case "HelpCircle":
-				return <HelpCircle size="48" />;
+				return <HelpCircle size={this.props.size} className={classList} />;
 			case "Home":
-				return <Home size="48" />;
+				return <Home size={this.props.size} className={classList} />;
 			case "Image":
-				return <Image size="48" />;
+				return <Image size={this.props.size} className={classList} />;
 			case "Inbox":
-				return <Inbox size="48" />;
+				return <Inbox size={this.props.size} className={classList} />;
 			case "Info":
-				return <Info size="48" />;
+				return <Info size={this.props.size} className={classList} />;
 			case "Instagram":
-				return <Instagram size="48" />;
+				return <Instagram size={this.props.size} className={classList} />;
 			case "Italic":
-				return <Italic size="48" />;
+				return <Italic size={this.props.size} className={classList} />;
 			case "Layers":
-				return <Layers size="48" />;
+				return <Layers size={this.props.size} className={classList} />;
 			case "Layout":
-				return <Layout size="48" />;
+				return <Layout size={this.props.size} className={classList} />;
 			case "LifeBuoy":
-				return <LifeBuoy size="48" />;
+				return <LifeBuoy size={this.props.size} className={classList} />;
 			case "Link2":
-				return <Link2 size="48" />;
+				return <Link2 size={this.props.size} className={classList} />;
 			case "Link":
-				return <Link size="48" />;
+				return <Link size={this.props.size} className={classList} />;
 			case "Linkedin":
-				return <Linkedin size="48" />;
+				return <Linkedin size={this.props.size} className={classList} />;
 			case "List":
-				return <List size="48" />;
+				return <List size={this.props.size} className={classList} />;
 			case "Loader":
-				return <Loader size="48" />;
+				return <Loader size={this.props.size} className={classList} />;
 			case "Lock":
-				return <Lock size="48" />;
+				return <Lock size={this.props.size} className={classList} />;
 			case "LogIn":
-				return <LogIn size="48" />;
+				return <LogIn size={this.props.size} className={classList} />;
 			case "LogOut":
-				return <LogOut size="48" />;
+				return <LogOut size={this.props.size} className={classList} />;
 			case "Mail":
-				return <Mail size="48" />;
+				return <Mail size={this.props.size} className={classList} />;
 			case "MapPin":
-				return <MapPin size="48" />;
+				return <MapPin size={this.props.size} className={classList} />;
 			case "Map":
-				return <Map size="48" />;
+				return <Map size={this.props.size} className={classList} />;
 			case "Maximize2":
-				return <Maximize2 size="48" />;
+				return <Maximize2 size={this.props.size} className={classList} />;
 			case "Maximize":
-				return <Maximize size="48" />;
+				return <Maximize size={this.props.size} className={classList} />;
 			case "Menu":
-				return <Menu size="48" />;
+				return <Menu size={this.props.size} className={classList} />;
 			case "MessageCircle":
-				return <MessageCircle size="48" />;
+				return <MessageCircle size={this.props.size} className={classList} />;
 			case "MessageSquare":
-				return <MessageSquare size="48" />;
+				return <MessageSquare size={this.props.size} className={classList} />;
 			case "MicOff":
-				return <MicOff size="48" />;
+				return <MicOff size={this.props.size} className={classList} />;
 			case "Mic":
-				return <Mic size="48" />;
+				return <Mic size={this.props.size} className={classList} />;
 			case "Minimize2":
-				return <Minimize2 size="48" />;
+				return <Minimize2 size={this.props.size} className={classList} />;
 			case "Minimize":
-				return <Minimize size="48" />;
+				return <Minimize size={this.props.size} className={classList} />;
 			case "MinusCircle":
-				return <MinusCircle size="48" />;
+				return <MinusCircle size={this.props.size} className={classList} />;
 			case "MinusSquare":
-				return <MinusSquare size="48" />;
+				return <MinusSquare size={this.props.size} className={classList} />;
 			case "Minus":
-				return <Minus size="48" />;
+				return <Minus size={this.props.size} className={classList} />;
 			case "Monitor":
-				return <Monitor size="48" />;
+				return <Monitor size={this.props.size} className={classList} />;
 			case "Moon":
-				return <Moon size="48" />;
+				return <Moon size={this.props.size} className={classList} />;
 			case "MoreHorizontal":
-				return <MoreHorizontal size="48" />;
+				return <MoreHorizontal size={this.props.size} className={classList} />;
 			case "MoreVertical":
-				return <MoreVertical size="48" />;
+				return <MoreVertical size={this.props.size} className={classList} />;
 			case "Move":
-				return <Move size="48" />;
+				return <Move size={this.props.size} className={classList} />;
 			case "Music":
-				return <Music size="48" />;
+				return <Music size={this.props.size} className={classList} />;
 			case "Navigation2":
-				return <Navigation2 size="48" />;
+				return <Navigation2 size={this.props.size} className={classList} />;
 			case "Navigation":
-				return <Navigation size="48" />;
+				return <Navigation size={this.props.size} className={classList} />;
 			case "Octagon":
-				return <Octagon size="48" />;
+				return <Octagon size={this.props.size} className={classList} />;
 			case "Package":
-				return <Package size="48" />;
+				return <Package size={this.props.size} className={classList} />;
 			case "Paperclip":
-				return <Paperclip size="48" />;
+				return <Paperclip size={this.props.size} className={classList} />;
 			case "PauseCircle":
-				return <PauseCircle size="48" />;
+				return <PauseCircle size={this.props.size} className={classList} />;
 			case "Pause":
-				return <Pause size="48" />;
+				return <Pause size={this.props.size} className={classList} />;
 			case "Percent":
-				return <Percent size="48" />;
+				return <Percent size={this.props.size} className={classList} />;
 			case "PhoneCall":
-				return <PhoneCall size="48" />;
+				return <PhoneCall size={this.props.size} className={classList} />;
 			case "PhoneForwarded":
-				return <PhoneForwarded size="48" />;
+				return <PhoneForwarded size={this.props.size} className={classList} />;
 			case "PhoneIncoming":
-				return <PhoneIncoming size="48" />;
+				return <PhoneIncoming size={this.props.size} className={classList} />;
 			case "PhoneMissed":
-				return <PhoneMissed size="48" />;
+				return <PhoneMissed size={this.props.size} className={classList} />;
 			case "PhoneOff":
-				return <PhoneOff size="48" />;
+				return <PhoneOff size={this.props.size} className={classList} />;
 			case "PhoneOutgoing":
-				return <PhoneOutgoing size="48" />;
+				return <PhoneOutgoing size={this.props.size} className={classList} />;
 			case "Phone":
-				return <Phone size="48" />;
+				return <Phone size={this.props.size} className={classList} />;
 			case "PieChart":
-				return <PieChart size="48" />;
+				return <PieChart size={this.props.size} className={classList} />;
 			case "PlayCircle":
-				return <PlayCircle size="48" />;
+				return <PlayCircle size={this.props.size} className={classList} />;
 			case "Play":
-				return <Play size="48" />;
+				return <Play size={this.props.size} className={classList} />;
 			case "PlusCircle":
-				return <PlusCircle size="48" />;
+				return <PlusCircle size={this.props.size} className={classList} />;
 			case "PlusSquare":
-				return <PlusSquare size="48" />;
+				return <PlusSquare size={this.props.size} className={classList} />;
 			case "Plus":
-				return <Plus size="48" />;
+				return <Plus size={this.props.size} className={classList} />;
 			case "Pocket":
-				return <Pocket size="48" />;
+				return <Pocket size={this.props.size} className={classList} />;
 			case "Power":
-				return <Power size="48" />;
+				return <Power size={this.props.size} className={classList} />;
 			case "Printer":
-				return <Printer size="48" />;
+				return <Printer size={this.props.size} className={classList} />;
 			case "Radio":
-				return <Radio size="48" />;
+				return <Radio size={this.props.size} className={classList} />;
 			case "RefreshCcw":
-				return <RefreshCcw size="48" />;
+				return <RefreshCcw size={this.props.size} className={classList} />;
 			case "RefreshCw":
-				return <RefreshCw size="48" />;
+				return <RefreshCw size={this.props.size} className={classList} />;
 			case "Repeat":
-				return <Repeat size="48" />;
+				return <Repeat size={this.props.size} className={classList} />;
 			case "Rewind":
-				return <Rewind size="48" />;
+				return <Rewind size={this.props.size} className={classList} />;
 			case "RotateCcw":
-				return <RotateCcw size="48" />;
+				return <RotateCcw size={this.props.size} className={classList} />;
 			case "RotateCw":
-				return <RotateCw size="48" />;
+				return <RotateCw size={this.props.size} className={classList} />;
 			case "Rss":
-				return <Rss size="48" />;
+				return <Rss size={this.props.size} className={classList} />;
 			case "Save":
-				return <Save size="48" />;
+				return <Save size={this.props.size} className={classList} />;
 			case "Scissors":
-				return <Scissors size="48" />;
+				return <Scissors size={this.props.size} className={classList} />;
 			case "Search":
-				return <Search size="48" />;
+				return <Search size={this.props.size} className={classList} />;
 			case "Send":
-				return <Send size="48" />;
+				return <Send size={this.props.size} className={classList} />;
 			case "Server":
-				return <Server size="48" />;
+				return <Server size={this.props.size} className={classList} />;
 			case "Settings":
-				return <Settings size="48" />;
+				return <Settings size={this.props.size} className={classList} />;
 			case "Share2":
-				return <Share2 size="48" />;
+				return <Share2 size={this.props.size} className={classList} />;
 			case "Share":
-				return <Share size="48" />;
+				return <Share size={this.props.size} className={classList} />;
 			case "ShieldOff":
-				return <ShieldOff size="48" />;
+				return <ShieldOff size={this.props.size} className={classList} />;
 			case "Shield":
-				return <Shield size="48" />;
+				return <Shield size={this.props.size} className={classList} />;
 			case "ShoppingBag":
-				return <ShoppingBag size="48" />;
+				return <ShoppingBag size={this.props.size} className={classList} />;
 			case "ShoppingCart":
-				return <ShoppingCart size="48" />;
+				return <ShoppingCart size={this.props.size} className={classList} />;
 			case "Shuffle":
-				return <Shuffle size="48" />;
+				return <Shuffle size={this.props.size} className={classList} />;
 			case "Sidebar":
-				return <Sidebar size="48" />;
+				return <Sidebar size={this.props.size} className={classList} />;
 			case "SkipBack":
-				return <SkipBack size="48" />;
+				return <SkipBack size={this.props.size} className={classList} />;
 			case "SkipForward":
-				return <SkipForward size="48" />;
+				return <SkipForward size={this.props.size} className={classList} />;
 			case "Slack":
-				return <Slack size="48" />;
+				return <Slack size={this.props.size} className={classList} />;
 			case "Slash":
-				return <Slash size="48" />;
+				return <Slash size={this.props.size} className={classList} />;
 			case "Sliders":
-				return <Sliders size="48" />;
+				return <Sliders size={this.props.size} className={classList} />;
 			case "Smartphone":
-				return <Smartphone size="48" />;
+				return <Smartphone size={this.props.size} className={classList} />;
 			case "Speaker":
-				return <Speaker size="48" />;
+				return <Speaker size={this.props.size} className={classList} />;
 			case "Square":
-				return <Square size="48" />;
+				return <Square size={this.props.size} className={classList} />;
 			case "Star":
-				return <Star size="48" />;
+				return <Star size={this.props.size} className={classList} />;
 			case "StopCircle":
-				return <StopCircle size="48" />;
+				return <StopCircle size={this.props.size} className={classList} />;
 			case "Sun":
-				return <Sun size="48" />;
+				return <Sun size={this.props.size} className={classList} />;
 			case "Sunrise":
-				return <Sunrise size="48" />;
+				return <Sunrise size={this.props.size} className={classList} />;
 			case "Sunset":
-				return <Sunset size="48" />;
+				return <Sunset size={this.props.size} className={classList} />;
 			case "Tablet":
-				return <Tablet size="48" />;
+				return <Tablet size={this.props.size} className={classList} />;
 			case "Tag":
-				return <Tag size="48" />;
+				return <Tag size={this.props.size} className={classList} />;
 			case "Target":
-				return <Target size="48" />;
+				return <Target size={this.props.size} className={classList} />;
 			case "Terminal":
-				return <Terminal size="48" />;
+				return <Terminal size={this.props.size} className={classList} />;
 			case "Thermometer":
-				return <Thermometer size="48" />;
+				return <Thermometer size={this.props.size} className={classList} />;
 			case "ThumbsDown":
-				return <ThumbsDown size="48" />;
+				return <ThumbsDown size={this.props.size} className={classList} />;
 			case "ThumbsUp":
-				return <ThumbsUp size="48" />;
+				return <ThumbsUp size={this.props.size} className={classList} />;
 			case "ToggleLeft":
-				return <ToggleLeft size="48" />;
+				return <ToggleLeft size={this.props.size} className={classList} />;
 			case "ToggleRight":
-				return <ToggleRight size="48" />;
+				return <ToggleRight size={this.props.size} className={classList} />;
 			case "Trash2":
-				return <Trash2 size="48" />;
+				return <Trash2 size={this.props.size} className={classList} />;
 			case "Trash":
-				return <Trash size="48" />;
+				return <Trash size={this.props.size} className={classList} />;
 			case "TrendingDown":
-				return <TrendingDown size="48" />;
+				return <TrendingDown size={this.props.size} className={classList} />;
 			case "TrendingUp":
-				return <TrendingUp size="48" />;
+				return <TrendingUp size={this.props.size} className={classList} />;
 			case "Triangle":
-				return <Triangle size="48" />;
+				return <Triangle size={this.props.size} className={classList} />;
 			case "Truck":
-				return <Truck size="48" />;
+				return <Truck size={this.props.size} className={classList} />;
 			case "Tv":
-				return <Tv size="48" />;
+				return <Tv size={this.props.size} className={classList} />;
 			case "Twitter":
-				return <Twitter size="48" />;
+				return <Twitter size={this.props.size} className={classList} />;
 			case "Type":
-				return <Type size="48" />;
+				return <Type size={this.props.size} className={classList} />;
 			case "Umbrella":
-				return <Umbrella size="48" />;
+				return <Umbrella size={this.props.size} className={classList} />;
 			case "Underline":
-				return <Underline size="48" />;
+				return <Underline size={this.props.size} className={classList} />;
 			case "Unlock":
-				return <Unlock size="48" />;
+				return <Unlock size={this.props.size} className={classList} />;
 			case "UploadCloud":
-				return <UploadCloud size="48" />;
+				return <UploadCloud size={this.props.size} className={classList} />;
 			case "Upload":
-				return <Upload size="48" />;
+				return <Upload size={this.props.size} className={classList} />;
 			case "UserCheck":
-				return <UserCheck size="48" />;
+				return <UserCheck size={this.props.size} className={classList} />;
 			case "UserMinus":
-				return <UserMinus size="48" />;
+				return <UserMinus size={this.props.size} className={classList} />;
 			case "UserPlus":
-				return <UserPlus size="48" />;
+				return <UserPlus size={this.props.size} className={classList} />;
 			case "UserX":
-				return <UserX size="48" />;
+				return <UserX size={this.props.size} className={classList} />;
 			case "User":
-				return <User size="48" />;
+				return <User size={this.props.size} className={classList} />;
 			case "Users":
-				return <Users size="48" />;
+				return <Users size={this.props.size} className={classList} />;
 			case "VideoOff":
-				return <VideoOff size="48" />;
+				return <VideoOff size={this.props.size} className={classList} />;
 			case "Video":
-				return <Video size="48" />;
+				return <Video size={this.props.size} className={classList} />;
 			case "Voicemail":
-				return <Voicemail size="48" />;
+				return <Voicemail size={this.props.size} className={classList} />;
 			case "Volume1":
-				return <Volume1 size="48" />;
+				return <Volume1 size={this.props.size} className={classList} />;
 			case "Volume2":
-				return <Volume2 size="48" />;
+				return <Volume2 size={this.props.size} className={classList} />;
 			case "VolumeX":
-				return <VolumeX size="48" />;
+				return <VolumeX size={this.props.size} className={classList} />;
 			case "Volume":
-				return <Volume size="48" />;
+				return <Volume size={this.props.size} className={classList} />;
 			case "Watch":
-				return <Watch size="48" />;
+				return <Watch size={this.props.size} className={classList} />;
 			case "WifiOff":
-				return <WifiOff size="48" />;
+				return <WifiOff size={this.props.size} className={classList} />;
 			case "Wifi":
-				return <Wifi size="48" />;
+				return <Wifi size={this.props.size} className={classList} />;
 			case "Wind":
-				return <Wind size="48" />;
+				return <Wind size={this.props.size} className={classList} />;
 			case "XCircle":
-				return <XCircle size="48" />;
+				return <XCircle size={this.props.size} className={classList} />;
 			case "XSquare":
-				return <XSquare size="48" />;
+				return <XSquare size={this.props.size} className={classList} />;
 			case "X":
-				return <X size="48" />;
+				return <X size={this.props.size} className={classList} />;
 			case "ZapOff":
-				return <ZapOff size="48" />;
+				return <ZapOff size={this.props.size} className={classList} />;
 			case "Zap":
-				return <Zap size="48" />;
+				return <Zap size={this.props.size} className={classList} />;
 			case "ZoomIn":
-				return <ZoomIn size="48" />;
+				return <ZoomIn size={this.props.size} className={classList} />;
 			case "ZoomOut":
-				return <ZoomOut size="48" />;
+				return <ZoomOut size={this.props.size} className={classList} />;
 			default:
-				return <span size="48"></span>;
+				return <span></span>;
 		}
 	}
 

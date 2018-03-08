@@ -1,0 +1,62 @@
+.feather,
+.feather line,
+.feather path,
+.feather polygon {
+  animation-duration: 1s;
+  animation-iteration-count: 3; }
+
+@keyframes featherActivity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.feather-activity {
+  animation-name: featherActivity; }
+
+@keyframes featherAirplay {
+  from {
+    opacity: 0;
+    transform: translateY(5%); }
+  to {
+    opacity: 1;
+    transform: translateY(-7%); } }
+
+.feather-airplay polygon {
+  animation-name: featherAirplay; }
+
+@keyframes featherAlertCircle {
+  from {
+    opacity: 0;
+    transform: scale(1); }
+  to {
+    opacity: 1;
+    transform: scale(1.2); } }
+
+.feather-alert-circle line {
+  transform-origin: center center;
+  animation-name: featherAlertCircle; }
+
+@keyframes featherAlertOctagon {
+  from {
+    opacity: 0;
+    transform: scale(0.9); }
+  to {
+    opacity: 1;
+    transform: scale(1.2); } }
+
+.feather-alert-octagon line {
+  transform-origin: center center;
+  animation-name: featherAlertOctagon; }
+
+@keyframes featherAlertTriangle {
+  from {
+    opacity: 0;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    transform: scale(1.1); } }
+
+.feather-alert-triangle line {
+  transform-origin: center center;
+  animation-name: featherAlertTriangle; }
