@@ -1,0 +1,14 @@
+@keyframes featherTrendingUp {
+	from { 
+		stroke-dasharray: 100;
+		stroke-dashoffset: -100; 
+	}
+	to { 
+		stroke-dasharray: 100;
+		stroke-dashoffset: 0; 
+	}
+}
+.feather-trending-up {
+	stroke-dashoffset: -100;
+	animation-name: featherTrendingUp;	
+}
