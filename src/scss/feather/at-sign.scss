@@ -1,0 +1,8 @@
+@keyframes featherAtSign {
+	0% { stroke-dasharray: 100; stroke-dashoffset: 100; }
+	100% { stroke-dasharray: 85; stroke-dashoffset: 0; }
+}
+.feather-at-sign path,
+.feather-at-sign circle {
+	animation-name: featherAtSign;
+}

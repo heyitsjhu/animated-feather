@@ -1,9 +1,15 @@
-.feather,
-.feather line,
-.feather path,
-.feather polygon {
+/* 
+ * TODO
+ * Consider refactoring arrow animations
+ */
+
+.feather {
 	animation-duration: 1s;
 	animation-iteration-count: 1;
+	line, path, circle, polygon, polyline {
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+	}
 }
 
 @import 'feather/activity';
@@ -20,17 +26,20 @@
 @import 'feather/arrow-down-left';
 @import 'feather/arrow-down-right';
 
-
 @import 'feather/arrow-down';
 @import 'feather/arrow-left-circle';
 @import 'feather/arrow-left';
 @import 'feather/arrow-right-circle';
 @import 'feather/arrow-right';
 @import 'feather/arrow-up-circle';
-@import 'feather/arrow-up-right';
-
 @import 'feather/arrow-up-left';
+
+@import 'feather/arrow-up-right';
 @import 'feather/arrow-up';
+@import 'feather/at-sign';
+@import 'feather/bar-chart2';
+@import 'feather/bar-chart';
+@import 'feather/battery-charging';
 
 @import 'feather/trending-down';
 @import 'feather/trending-up';

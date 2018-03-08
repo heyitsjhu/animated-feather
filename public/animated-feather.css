@@ -1,9 +1,13 @@
-.feather,
-.feather line,
-.feather path,
-.feather polygon {
+/* 
+ * TODO
+ * Consider refactoring arrow animations
+ */
+.feather {
   animation-duration: 1s;
   animation-iteration-count: 1; }
+  .feather line, .feather path, .feather circle, .feather polygon, .feather polyline {
+    animation-duration: 1s;
+    animation-iteration-count: 1; }
 
 @keyframes featherActivity {
   0% {
@@ -261,23 +265,6 @@
 .feather-arrow-up-circle {
   animation-name: featherArrowUpCircle; }
 
-@keyframes featherArrowUpRight {
-  0% {
-    transform: translate(0%); }
-  20% {
-    transform: translate(-10%, 10%); }
-  50% {
-    transform: translate(20%, -20%); }
-  70% {
-    transform: translate(-8%, 8%); }
-  90% {
-    transform: translate(20%, -20%); }
-  100% {
-    transform: translate(20%, -20%); } }
-
-.feather-arrow-up-right {
-  animation-name: featherArrowUpRight; }
-
 @keyframes featherArrowUpLeft {
   0% {
     transform: translate(0%); }
@@ -295,6 +282,23 @@
 .feather-arrow-up-left {
   animation-name: featherArrowUpLeft; }
 
+@keyframes featherArrowUpRight {
+  0% {
+    transform: translate(0%); }
+  20% {
+    transform: translate(-10%, 10%); }
+  50% {
+    transform: translate(20%, -20%); }
+  70% {
+    transform: translate(-8%, 8%); }
+  90% {
+    transform: translate(20%, -20%); }
+  100% {
+    transform: translate(20%, -20%); } }
+
+.feather-arrow-up-right {
+  animation-name: featherArrowUpRight; }
+
 @keyframes featherArrowUp {
   0% {
     transform: translateY(0%); }
@@ -311,6 +315,53 @@
 
 .feather-arrow-up {
   animation-name: featherArrowUp; }
+
+@keyframes featherAtSign {
+  0% {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100; }
+  100% {
+    stroke-dasharray: 85;
+    stroke-dashoffset: 0; } }
+
+.feather-at-sign path,
+.feather-at-sign circle {
+  animation-name: featherAtSign; }
+
+@keyframes featherBarChart2 {
+  0% {
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25; }
+  100% {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 0; } }
+
+.feather-bar-chart2 {
+  animation-name: featherBarChart2; }
+
+@keyframes featherBarChart {
+  0% {
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25; }
+  100% {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 0; } }
+
+.feather-bar-chart {
+  animation-name: featherBarChart; }
+
+@keyframes featherBatteryCharging {
+  0% {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60; }
+  100% {
+    stroke-dasharray: 40;
+    stroke-dashoffset: 0; } }
+
+.feather-battery-charging polyline {
+  stroke: #000;
+  stroke-width: 2;
+  animation-name: featherBatteryCharging; }
 
 @keyframes featherTrendingDown {
   from {
