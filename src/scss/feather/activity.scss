@@ -1,6 +1,6 @@
 @keyframes featherActivity {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
+	from { stroke-dasharray: 150; stroke-dashoffset: -150;  }
+	to { stroke-dasharray: 150; stroke-dashoffset: 0;  }
 }
 .feather-activity {
 	animation-name: featherActivity;

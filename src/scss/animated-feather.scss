@@ -2,13 +2,15 @@
  * TODO
  * Consider refactoring arrow animations
  */
-
+@import 'feather/animations';
 .feather {
 	animation-duration: 1s;
 	animation-iteration-count: 1;
+	animation-delay: 1s;
 	line, path, circle, polygon, polyline {
 		animation-duration: 1s;
 		animation-iteration-count: 1;
+		animation-delay: 1s;
 	}
 }
 
@@ -40,6 +42,21 @@
 @import 'feather/bar-chart2';
 @import 'feather/bar-chart';
 @import 'feather/battery-charging';
+
+@import 'feather/bluetooth';
+
+@import 'feather/check-circle';
+@import 'feather/check-square';
+@import 'feather/check';
+@import 'feather/chevron-down';
+@import 'feather/chevron-left';
+@import 'feather/chevron-right';
+@import 'feather/chevron-up';
+
+@import 'feather/chevrons-down';
+@import 'feather/chevrons-left';
+@import 'feather/chevrons-right';
+@import 'feather/chevrons-up';
 
 @import 'feather/trending-down';
 @import 'feather/trending-up';

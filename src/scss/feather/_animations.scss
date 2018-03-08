@@ -1,0 +1,81 @@
+/* Animations that are shared among various icons */
+@keyframes featherArrowPointUp {
+	0% { 
+		transform: translateY(0%);
+	}
+	20% { 
+		transform: translateY(10%);	
+	}
+	50% { 
+		transform: translateY(-20%);	
+	}
+	70% { 
+		transform: translateY(8%);	
+	}
+	90% { 
+		transform: translateY(-20%);
+	}
+	100% { 
+		transform: translateY(-20%);
+	}
+}
+@keyframes featherArrowPointDown {
+	0% { 
+		transform: translateY(0%);
+	}
+	20% { 
+		transform: translateY(-10%);	
+	}
+	50% { 
+		transform: translateY(20%);	
+	}
+	70% { 
+		transform: translateY(-8%);	
+	}
+	90% { 
+		transform: translateY(20%);
+	}
+	100% { 
+		transform: translateY(20%);
+	}
+}
+@keyframes featherArrowPointLeft {
+	0% { 
+		transform: translateX(0%);
+	}
+	20% { 
+		transform: translateX(10%);	
+	}
+	50% { 
+		transform: translateX(-20%);	
+	}
+	70% { 
+		transform: translateX(8%);	
+	}
+	90% { 
+		transform: translateX(-20%);
+	}
+	100% { 
+		transform: translateX(-20%);
+	}
+}
+@keyframes featherArrowPointRight {
+	0% { 
+		transform: translateX(0%);
+	}
+	20% { 
+		transform: translateX(-10%);	
+	}
+	50% { 
+		transform: translateX(20%);	
+	}
+	70% { 
+		transform: translateX(-8%);	
+	}
+	90% { 
+		transform: translateX(20%);
+	}
+	100% { 
+		transform: translateX(20%);
+	}
+}

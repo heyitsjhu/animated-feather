@@ -1,6 +1,6 @@
 @keyframes featherBatteryCharging {
-	0% { stroke-dasharray: 60; stroke-dashoffset: 60 }
-	100% { stroke-dasharray: 40; stroke-dashoffset: 0 }
+	0% { stroke-dasharray: 60; stroke-dashoffset: 60; }
+	100% { stroke-dasharray: 50; stroke-dashoffset: 0; }
 }
 .feather-battery-charging polyline {
 	stroke: #000;

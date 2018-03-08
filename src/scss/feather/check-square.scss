@@ -1,0 +1,7 @@
+@keyframes featherCheckSquare {
+	0% { stroke-dasharray: 60; stroke-dashoffset: 60; }
+	100% { stroke-dasharray: 60; stroke-dashoffset: 0; }
+}
+.feather-check-square {
+	animation-name: featherCheckSquare;
+}

@@ -1,0 +1,8 @@
+@keyframes featherBluetooth {
+	from { stroke-dasharray: 80; stroke-dashoffset: 80; }
+	to { stroke-dasharray: 80; stroke-dashoffset: 0; }
+}
+
+.feather-bluetooth {
+	animation-name: featherBluetooth;
+}
