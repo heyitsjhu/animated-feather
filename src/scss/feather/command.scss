@@ -1,0 +1,5 @@
+@include drawAnimation(featherCommand, 120, -120);
+
+.feather-command {
+	animation-name: featherCommand;
+}
