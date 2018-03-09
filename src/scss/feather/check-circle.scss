@@ -1,7 +1,5 @@
-@keyframes featherCheckCircle {
-	0% { stroke-dasharray: 90; stroke-dashoffset: -90; }
-	100% { stroke-dasharray: 90; stroke-dashoffset: 0; }
-}
+@include drawAnimation(featherCheckCircle, 90, -90);
+
 .feather-check-circle {
 	animation-name: featherCheckCircle;
 }

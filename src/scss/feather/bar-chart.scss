@@ -1,7 +1,5 @@
-@keyframes featherBarChart {
-	0% { stroke-dasharray: 25; stroke-dashoffset: 25 }
-	100% { stroke-dasharray: 20; stroke-dashoffset: 0 }
-}
+@include drawAnimation(featherBarChart, 25, 20);
+
 .feather-bar-chart {
 	animation-name: featherBarChart;
 }

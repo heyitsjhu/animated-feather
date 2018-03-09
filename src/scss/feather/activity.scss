@@ -1,7 +1,5 @@
-@keyframes featherActivity {
-	from { stroke-dasharray: 150; stroke-dashoffset: -150;  }
-	to { stroke-dasharray: 150; stroke-dashoffset: 0;  }
-}
+@include drawAnimation(featherActivity, 150, -150);
+
 .feather-activity {
 	animation-name: featherActivity;
 }

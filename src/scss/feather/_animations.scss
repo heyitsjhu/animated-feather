@@ -1,81 +1,46 @@
 /* Animations that are shared among various icons */
-@keyframes featherArrowPointUp {
-	0% { 
-		transform: translateY(0%);
-	}
-	20% { 
-		transform: translateY(10%);	
-	}
-	50% { 
-		transform: translateY(-20%);	
-	}
-	70% { 
-		transform: translateY(8%);	
-	}
-	90% { 
-		transform: translateY(-20%);
-	}
-	100% { 
-		transform: translateY(-20%);
+
+// Determine which arrow animation name to used in bounceAnimation function.
+@mixin arrowBounceAnimation($direction) {
+	@if $direction == "up" {
+		@include bounceAnimation(featherArrowPointUp, Y, false);
+	} @else if $direction == "down" {
+		@include bounceAnimation(featherArrowPointDown, Y, true);
+	} @else if $direction == "left" {
+		@include bounceAnimation(featherArrowPointLeft, X, false);
+	} @else if $direction == "right" {
+		@include bounceAnimation(featherArrowPointRight, X, true);
 	}
 }
-@keyframes featherArrowPointDown {
-	0% { 
-		transform: translateY(0%);
-	}
-	20% { 
-		transform: translateY(-10%);	
-	}
-	50% { 
-		transform: translateY(20%);	
-	}
-	70% { 
-		transform: translateY(-8%);	
-	}
-	90% { 
-		transform: translateY(20%);
-	}
-	100% { 
-		transform: translateY(20%);
-	}
-}
-@keyframes featherArrowPointLeft {
-	0% { 
-		transform: translateX(0%);
-	}
-	20% { 
-		transform: translateX(10%);	
-	}
-	50% { 
-		transform: translateX(-20%);	
-	}
-	70% { 
-		transform: translateX(8%);	
-	}
-	90% { 
-		transform: translateX(-20%);
-	}
-	100% { 
-		transform: translateX(-20%);
+
+// Create bounce animation for up, down, left and right arrows
+@mixin bounceAnimation($animationName, $axis, $negativeStart) {
+	$start: 0;
+	$pullBack: if($negativeStart, -20, 20);
+	$firstBounce: round(-$pullBack);
+	$firstBounceBack: round(-($firstBounce * 0.6));
+	$secondBounce: round(-($firstBounceBack * 0.6667));
+	$secondBounceBack: round(-($secondBounce * 0.625));
+
+	@keyframes #{$animationName} {
+		0%, 15%, 20%, 35%, 50%, 65%, 80%, 95%, 100% {
+			animation-timing-function: cubic-bezier(.71,.2,.46,.89);
+		}
+
+		0% { transform: unquote("translate#{$axis}(#{$start}%)"); }
+		15% { transform: unquote("translate#{$axis}(#{$pullBack}%)"); }
+		20% { transform: unquote("translate#{$axis}(#{$pullBack}%)"); }
+		35% { transform: unquote("translate#{$axis}(#{$firstBounce}%)"); }
+		50% { transform: unquote("translate#{$axis}(#{$firstBounceBack}%)"); }
+		65% { transform: unquote("translate#{$axis}(#{$secondBounce}%)"); }
+		80% { transform: unquote("translate#{$axis}(#{$secondBounceBack}%)"); }
+		95% { transform: unquote("translate#{$axis}(#{$start}%)"); }
+		100% { transform: unquote("translate#{$axis}(#{$start}%)"); }
 	}
 }
-@keyframes featherArrowPointRight {
-	0% { 
-		transform: translateX(0%);
-	}
-	20% { 
-		transform: translateX(-10%);	
-	}
-	50% { 
-		transform: translateX(20%);	
-	}
-	70% { 
-		transform: translateX(-8%);	
-	}
-	90% { 
-		transform: translateX(20%);
-	}
-	100% { 
-		transform: translateX(20%);
+@mixin drawAnimation($animationName, $dasharray, $dashoffset) {
+	@keyframes #{$animationName} {
+		from { stroke-dasharray: $dasharray; stroke-dashoffset: $dashoffset;  }
+		to { stroke-dasharray: $dasharray; stroke-dashoffset: 0;  }
 	}
 }

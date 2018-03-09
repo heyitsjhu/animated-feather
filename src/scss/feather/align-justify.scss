@@ -1,14 +1,5 @@
-@keyframes featherAlignJustify {
-	from { 
-		stroke-dasharray: 100;
-		stroke-dashoffset: -100; 
-	}
-	to { 
-		stroke-dasharray: 100;
-		stroke-dashoffset: 0; 
-	}
-}
-.feather-align-justify line {
-	stroke-dashoffset: -100;
-	animation-name: featherAlignJustify;	
+@include drawAnimation(featherAlignJustify, 25, -25);
+
+.feather-align-justify {
+	animation-name: featherAlignJustify;
 }
