@@ -44,7 +44,6 @@
 		to { stroke-dasharray: $dasharray; stroke-dashoffset: 0;  }
 	}
 }
-
 @mixin pulseAnimation($animationName) {
 	@keyframes #{$animationName} {
 		0% { opacity: 0.1; transform: scale(1); }
@@ -53,5 +52,16 @@
 		60% { opacity: 1; transform: scale(1.1); }
 		80% { opacity: 0.8; transform: scale(0.9); }
 		100% { opacity: 1; transform: scale(1); }
+	}
+}
+@mixin rotateAnimation($animationName, $direction) {
+	@keyframes #{$animationName} {
+		@if $direction == "ccw" {
+			from { transform: rotate(360deg) }
+			to { transform: rotate(0deg) }
+		} @else if $direction == "cw" {
+			from { transform: rotate(-360deg) }
+			to { transform: rotate(0deg) }
+		}
 	}
 }

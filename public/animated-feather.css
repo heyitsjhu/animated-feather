@@ -784,6 +784,62 @@
 .feather-corner-down-right {
   animation-name: featherCornerDownRight; }
 
+@keyframes feathersettings {
+  from {
+    transform: rotate(-360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.feather-settings {
+  animation-name: feathersettings; }
+
+@keyframes featherEdit2 {
+  from {
+    stroke-dasharray: 150;
+    stroke-dashoffset: -150; }
+  to {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 0; } }
+
+.feather-edit2 {
+  animation-name: featherEdit2; }
+
+@keyframes featherRefreshCcw {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.feather-refresh-ccw {
+  animation-name: featherRefreshCcw; }
+
+@keyframes featherRefreshCw {
+  from {
+    transform: rotate(-360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.feather-refresh-cw {
+  animation-name: featherRefreshCw; }
+
+@keyframes featherRotateCcw {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.feather-rotate-ccw {
+  animation-name: featherRotateCcw; }
+
+@keyframes featherRotateCw {
+  from {
+    transform: rotate(-360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.feather-rotate-cw {
+  animation-name: featherRotateCw; }
+
 @keyframes featherTrendingDown {
   from {
     stroke-dasharray: 100;
@@ -807,3 +863,14 @@
 .feather-trending-up {
   stroke-dashoffset: -100;
   animation-name: featherTrendingUp; }
+
+@keyframes featherWind {
+  from {
+    stroke-dasharray: 150;
+    stroke-dashoffset: -150; }
+  to {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 0; } }
+
+.feather-wind {
+  animation-name: featherWind; }
